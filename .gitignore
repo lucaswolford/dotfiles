@@ -1,0 +1,15 @@
+# ignore everything
+/*
+/*/
+
+# track these files
+!.gitignore
+
+!/.vim
+!.vimrc
+
+!.tmux_conf
+
+!.bash_aliases
+!.bash_profile
+!.bashrc

@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/lucas/develops/visions'
+let g:netrw_dirhist_2='/home/lucas/develops/grouper/lib/tasks'
+let g:netrw_dirhist_3='/home/lucas/develops/grouper'
