@@ -1,5 +1,4 @@
-call pathogen#incubate()
-filetype off
+execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
