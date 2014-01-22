@@ -1,4 +1,4 @@
-execute pathogen#infect()
+﻿execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
@@ -33,8 +33,7 @@ set mat=5  " Bracket blinking.
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
-set list
-set listchars=eol:¬,tab:▸/,trail:~
+set list listchars=tab:>-,trail:.
 
 set hlsearch
 " Bind CTRL-L to clear search
@@ -74,11 +73,12 @@ nnoremap <Leader>cc :s/#//<CR>
 vnoremap <Leader>c  :s/^/#/<CR>
 vnoremap <Leader>cc :s/#//<CR>
 nnoremap <Leader>n  :tabnew<CR>
-nnoremap <Leader>p  :CommandT<CR>
+nnoremap <Leader>p  :CtrlP<CR>
 nnoremap <Leader>tt :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>ts :call RunNearestSpec()<CR>
 nnoremap <Leader>tl :call RunLastSpec()<CR>
 nnoremap <Leader>ta :! clear ; rake spec<CR>
+nnoremap <Leader>gg :! clear ; grunt jasmine<CR>
 
 "window commands
 nnoremap WS  :sp<CR>
@@ -102,10 +102,8 @@ vnoremap L $
 
 nnoremap <Leader>erc :e ~/.vimrc<CR>
 
+" Quick code folding
 nnoremap <Space> za
-
-" Quickly get out of insert mode without your fingers having to leave the home row
-inoremap jj <Esc>
 
 " swtich colon and semicolon
 nnoremap ; :
