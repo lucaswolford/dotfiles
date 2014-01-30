@@ -70,8 +70,6 @@ nnoremap <Leader>b  :bd<CR>
 nnoremap <Leader>ba :%bd<CR>
 nnoremap <Leader>c  :s/^/#/<CR>
 nnoremap <Leader>cc :s/#//<CR>
-vnoremap <Leader>c  :s/^/#/<CR>
-vnoremap <Leader>cc :s/#//<CR>
 nnoremap <Leader>n  :tabnew<CR>
 nnoremap <Leader>p  :CtrlP<CR>
 nnoremap <Leader>tt :call RunCurrentSpecFile()<CR>
@@ -79,6 +77,11 @@ nnoremap <Leader>ts :call RunNearestSpec()<CR>
 nnoremap <Leader>tl :call RunLastSpec()<CR>
 nnoremap <Leader>ta :! clear ; rake spec<CR>
 nnoremap <Leader>gg :! clear ; grunt jasmine<CR>
+
+
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>ga :Git add -A<CR>
+nnoremap <Leader>gc :Gcommit<CR>
 
 "window commands
 nnoremap WS  :sp<CR>
