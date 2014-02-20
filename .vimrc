@@ -103,6 +103,11 @@ vnoremap H ^
 nnoremap L $
 vnoremap L $
 
+nnoremap <silent> <C-j> :m +1<CR>
+nnoremap <silent> <C-k> :m -2<CR>
+vnoremap <silent> <C-j> :m +1<CR>
+vnoremap <silent> <C-k> :m -2<CR>
+
 nnoremap <Leader>erc :e ~/.vimrc<CR>
 
 " Quick code folding
@@ -125,7 +130,6 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:
 " F8 to highlight all occurances of a word
 nnoremap <F8> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 
-" map Ctrl-A to Ctrl-Shift-A
 nnoremap <C-i> <C-a>
 nnoremap <C-d> <C-x>
 
