@@ -49,7 +49,7 @@ autocmd FileType ruby,eruby :let g:AutoCloseExpandEnterOn=""
 " Set delay for leader key commands
 set timeoutlen=250
 
-set guifont=Droid\ Sans\ Mono\ 9
+set guifont=Droid\ Sans\ Mono\ 8
 
 "color settings
 "let g:rehash256=1
