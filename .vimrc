@@ -8,7 +8,7 @@ set history=256   " Number of things to remember in history.
 set ruler         " Ruler on
 set nu            " Line numbers on
 set autoread      "this should reload the file automatically
-let mapleader = ","
+let mapleader = "\<Space>"
 
 " Formatting (some of these are for coding in C and C++)
 set nocp incsearch
@@ -34,8 +34,8 @@ set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
 set list listchars=tab:>-,trail:.
-
 set hlsearch
+
 " Bind CTRL-L to clear search
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
@@ -54,31 +54,37 @@ set guifont=Droid\ Sans\ Mono\ 8
 "color settings
 "let g:rehash256=1
 set t_Co=256
-colorscheme molokai
+colorscheme github
 hi Search cterm=NONE ctermfg=yellow ctermbg=NONE
-
-" CUSTOM KEY BINDINGS
-nnoremap <Leader>s :Runittest<CR>
-nnoremap <Leader>fs :Rfunctionaltest<CR>
+set colorcolumn=80
 
 "Set shell to pickup RVM
 "set shell=/bin/bash\ --rcfile\ ~/.bash_profile\
 " Rspec.vim mappings
 let g:rspec_command = "!spec {spec}"
 
+"Manage buffers
 nnoremap <Leader>b  :bd<CR>
 nnoremap <Leader>ba :%bd<CR>
-nnoremap <Leader>c  :s/^/#/<CR>
-nnoremap <Leader>cc :s/#//<CR>
 nnoremap <Leader>n  :tabnew<CR>
 nnoremap <Leader>p  :CtrlP<CR>
+
+" Comment
+nnoremap <Leader>c  :s/^/#/<CR>
+nnoremap <Leader>cc :s/#//<CR>
+
+" folding
+nnoremap <Leader>f za
+
+" Run Tests
+nnoremap <Leader>s :Runittest<CR>
+nnoremap <Leader>fs :Rfunctionaltest<CR>
 nnoremap <Leader>tt :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>ts :call RunNearestSpec()<CR>
 nnoremap <Leader>tl :call RunLastSpec()<CR>
-nnoremap <Leader>ta :! clear ; rake spec<CR>
 nnoremap <Leader>gg :! clear ; grunt jasmine<CR>
 
-
+" Git
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>ga :Git add -A<CR>
 nnoremap <Leader>gc :Gcommit<CR>
@@ -103,15 +109,13 @@ vnoremap H ^
 nnoremap L $
 vnoremap L $
 
+" Move entire line up or down
 nnoremap <silent> <C-j> :m +1<CR>
 nnoremap <silent> <C-k> :m -2<CR>
 vnoremap <silent> <C-j> :m +1<CR>
 vnoremap <silent> <C-k> :m -2<CR>
 
 nnoremap <Leader>erc :e ~/.vimrc<CR>
-
-" Quick code folding
-nnoremap <Space> za
 
 " swtich colon and semicolon
 nnoremap ; :
@@ -130,14 +134,14 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:
 " F8 to highlight all occurances of a word
 nnoremap <F8> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 
+" Remap increment/decrement
 nnoremap <C-i> <C-a>
 nnoremap <C-d> <C-x>
 
-" are we insert or normal
-set cul
-:autocmd InsertEnter * set nocul
-:autocmd InsertLeave * set cul
+" highlight current line only in normal mode
+"set cul
+":autocmd InsertEnter * set nocul
+":autocmd InsertLeave * set cul
 
 " fix problem with enterkey on my laptop
 set <cr>=OM
-set colorcolumn=80
