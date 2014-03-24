@@ -54,7 +54,7 @@ set guifont=Droid\ Sans\ Mono\ 8
 "color settings
 "let g:rehash256=1
 set t_Co=256
-colorscheme github
+colorscheme molokai
 hi Search cterm=NONE ctermfg=yellow ctermbg=NONE
 set colorcolumn=80
 
