@@ -15,8 +15,11 @@ alias tf='tail -f'
 
 alias g='git'
 alias gs='git status'
+alias cgs='clear ; git status'
 alias gf='git fetch'
 alias gd='git diff'
+alias gb='git branch'
+alias gnm='git branch --no-merged'
 
 alias ms='mysql -u root'
 alias devdb='mysql -u root visions_development'
