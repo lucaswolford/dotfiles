@@ -35,7 +35,7 @@ let mapleader = "\<Space>"
 let base16colorspace=256  "Access colors present in 256 colorspace
 set <cr>=OM             "Fix problem with enterkey on my laptop
 
-color jellybeans
+color molokai
 
 " color column
 let &colorcolumn=join(range(81,999),",")
