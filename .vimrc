@@ -97,8 +97,8 @@ nnoremap <Leader>ga :Git add -A<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 
 "Manage buffers
-nnoremap <Leader>k  :bd<CR>
-nnoremap <Leader>ka :%bd<CR>
+nnoremap <Leader>b  :bd<CR>
+nnoremap <Leader>ba :%bd<CR>
 nnoremap <Leader>n  :tabnew<CR>
 nnoremap <Leader>p  :CtrlP<CR>
 
@@ -106,18 +106,18 @@ nnoremap <Leader>p  :CtrlP<CR>
 nnoremap <Leader><Space> za
 
 "window commands
-nnoremap WS  :sp<CR>
-nnoremap WV  :vsp<CR>
-nnoremap W+  :wincmd =<CR>
-nnoremap WW  :wincmd w<CR>
-nnoremap WR  :wincmd r<CR>
-nnoremap WX  :wincmd x<CR>
-nnoremap WJ  :wincmd j<CR>
-nnoremap WK  :wincmd k<CR>
-nnoremap WKK :wincmd K<CR>
-nnoremap WH  :wincmd h<CR>
-nnoremap WHH :wincmd H<CR>
-nnoremap WL  :wincmd l<CR>
+nnoremap <Leader>s  :sp<CR>
+nnoremap <Leader>v  :vsp<CR>
+nnoremap <Leader>+  :wincmd =<CR>
+nnoremap <Leader>w  :wincmd w<CR>
+nnoremap <Leader>r  :wincmd r<CR>
+nnoremap <Leader>x  :wincmd x<CR>
+nnoremap <Leader>j  :wincmd j<CR>
+nnoremap <Leader>k  :wincmd k<CR>
+nnoremap <Leader>kk :wincmd K<CR>
+nnoremap <Leader>h  :wincmd h<CR>
+nnoremap <Leader>hh :wincmd H<CR>
+nnoremap <Leader>l  :wincmd l<CR>
 
 "movement
 nnoremap H ^
