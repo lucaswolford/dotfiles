@@ -32,7 +32,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 let mapleader = "\<Space>"
-let base16colorspace=256  "Access colors present in 256 colorspace
+"let base16colorspace=256  "Access colors present in 256 colorspace
 set <cr>=OM             "Fix problem with enterkey on my laptop
 
 color molokai
