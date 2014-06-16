@@ -26,6 +26,8 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Plugin 'szw/vim-ctrlspace'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -81,8 +83,8 @@ autocmd FileType ruby,eruby :let g:AutoCloseExpandEnterOn=""
 "set timeoutlen=250
 
 " Jump to tests
-nnoremap <Leader>s :Runittest<CR>
-nnoremap <Leader>fs :Rfunctionaltest<CR>
+nnoremap <Leader>t :Runittest<CR>
+nnoremap <Leader>tt :Rfunctionaltest<CR>
 
 let g:rspec_command = 'Dispatch spec {spec}'
 
@@ -99,6 +101,7 @@ nnoremap <Leader>gc :Gcommit<CR>
 "Manage buffers
 nnoremap <Leader>b  :bd<CR>
 nnoremap <Leader>ba :%bd<CR>
+nnoremap <Leader>c  :close<CR>
 nnoremap <Leader>n  :tabnew<CR>
 nnoremap <Leader>p  :CtrlP<CR>
 
@@ -145,6 +148,8 @@ nnoremap <silent> <F6> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:
 " F8 to highlight all occurances of a word
 nnoremap <F8> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 
-" Remap increment/decrement
-nnoremap <C-i> <C-a>
-nnoremap <C-d> <C-x>
+" CtrlSpace Colors
+hi CtrlSpaceSelected term=reverse ctermfg=187   guifg=#d7d7af ctermbg=23    guibg=#005f5f cterm=bold gui=bold
+hi CtrlSpaceNormal   term=NONE    ctermfg=244   guifg=#808080 ctermbg=232   guibg=#080808 cterm=NONE gui=NONE
+hi CtrlSpaceSearch   ctermfg=220  guifg=#ffd700 ctermbg=NONE  guibg=NONE    cterm=bold    gui=bold
+hi CtrlSpaceStatus   ctermfg=230  guifg=#ffffd7 ctermbg=234   guibg=#1c1c1c cterm=NONE    gui=NONE
