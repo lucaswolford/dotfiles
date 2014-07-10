@@ -150,7 +150,7 @@ nnoremap <silent> <F6> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:
 nnoremap <F8> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 
 " clone paragraph
-noremap cp yap<S-}>p
+noremap yp yap<S-}>p
 
 " Align current paragraph
 noremap <leader>a =ip
