@@ -73,14 +73,12 @@ set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
 set list listchars=tab:>-,trail:.
 set hlsearch
+
 " Bind CTRL-L to clear search
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> <leader>l :<C-u>nohlsearch<CR><C-l>
 
 " fix to make autoclose and endwise play nicely together
 autocmd FileType ruby,eruby :let g:AutoCloseExpandEnterOn=""
-
-" Set delay for leader key commands
-"set timeoutlen=250
 
 " Jump to tests
 nnoremap <Leader>t :Runittest<CR>
@@ -111,28 +109,30 @@ nnoremap <Leader><Space> za
 "window commands
 nnoremap <Leader>s  :sp<CR>
 nnoremap <Leader>v  :vsp<CR>
-nnoremap <Leader>+  :wincmd =<CR>
 nnoremap <Leader>w  :wincmd w<CR>
 nnoremap <Leader>r  :wincmd r<CR>
-nnoremap <Leader>x  :wincmd x<CR>
-nnoremap <Leader>j  :wincmd j<CR>
-nnoremap <Leader>k  :wincmd k<CR>
 nnoremap <Leader>kk :wincmd K<CR>
-nnoremap <Leader>h  :wincmd h<CR>
 nnoremap <Leader>hh :wincmd H<CR>
-nnoremap <Leader>l  :wincmd l<CR>
+nnoremap <C-j> :wincmd j<CR>
+nnoremap <C-k> :wincmd k<CR>
+nnoremap <C-h> :wincmd h<CR>
+nnoremap <C-l> :wincmd l<CR>
+
+"tab movement
+noremap <S-l> gt
+noremap <S-h> gT
 
 "movement
-nnoremap H ^
-vnoremap H ^
-nnoremap L $
-vnoremap L $
+nnoremap ( ^
+vnoremap ( ^
+nnoremap ) $
+vnoremap ) $
 
 " Move entire line up or down
-nnoremap <silent> <C-j> :m +1<CR>
-nnoremap <silent> <C-k> :m -2<CR>
-vnoremap <silent> <C-j> :m +1<CR>
-vnoremap <silent> <C-k> :m -2<CR>
+nnoremap <silent> <S-j> :m +1<CR>
+nnoremap <silent> <S-k> :m -2<CR>
+vnoremap <silent> <S-j> :m +1<CR>
+vnoremap <silent> <S-k> :m -2<CR>
 
 nnoremap <Leader>erc :e ~/.vimrc<CR>
 
@@ -147,6 +147,16 @@ nnoremap <silent> <F6> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:
 
 " F8 to highlight all occurances of a word
 nnoremap <F8> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
+
+" clone paragraph
+noremap cp yap<S-}>p
+
+" Align current paragraph
+noremap <leader>a =ip
+
+" Apply macros
+nnoremap Q @q
+vnoremap Q :norm @q<cr>
 
 " CtrlSpace Colors
 hi CtrlSpaceSelected term=reverse ctermfg=187   guifg=#d7d7af ctermbg=23    guibg=#005f5f cterm=bold gui=bold
