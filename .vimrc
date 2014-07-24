@@ -119,21 +119,11 @@ nnoremap <C-k> :wincmd k<CR>
 nnoremap <C-h> :wincmd h<CR>
 nnoremap <C-l> :wincmd l<CR>
 
-"tab movement
-noremap <S-l> gt
-noremap <S-h> gT
-
 "movement
 nnoremap ( ^
 vnoremap ( ^
 nnoremap ) $
 vnoremap ) $
-
-" Move entire line up or down
-nnoremap <silent> <S-j> :m +1<CR>
-nnoremap <silent> <S-k> :m -2<CR>
-vnoremap <silent> <S-j> :m +1<CR>
-vnoremap <silent> <S-k> :m -2<CR>
 
 nnoremap <Leader>erc :e ~/.vimrc<CR>
 
@@ -150,7 +140,7 @@ nnoremap <silent> <F6> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:
 nnoremap <F8> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 
 " clone paragraph
-noremap yp yap<S-}>p
+noremap Yp yap<S-}>p
 
 " Align current paragraph
 noremap <leader>a =ip
