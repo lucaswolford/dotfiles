@@ -1,35 +1,19 @@
-alias tmux='tmux -2'
-
 alias gti='git'
 
 alias ..="cd ../.."
 alias ...="cd ../.."
-alias c="clear"
-
-alias sl=ls
-alias l='ls -CF'
-alias la='ls -A'
-alias ll='ls -lF'
-alias lla='ls -alF'
-alias tf='tail -f'
 
 alias g='git'
-alias gs='git status'
-alias cgs='clear ; git status'
-alias gf='git fetch'
-alias gd='git diff'
-alias gb='git branch'
+alias s='status'
+alias f='fetch'
 alias gnm='git branch --no-merged'
-
-alias ms='mysql -u root'
-alias devdb='mysql -u root visions_development'
 
 alias rc='script/console'
 alias rs='script/server'
 alias rg='script/generate'
 
 alias unicorn="unicorn_rails -p 3000"
-alias allspecs="spec spec/controllers; spec spec/models"
+alias allspecs="spec spec/models; spec spec/controllers"
 
 alias skycon="heroku run script/console --app visions-sky"
 alias stagingcon="heroku run script/console --app visions-staging"
