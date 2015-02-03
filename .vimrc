@@ -27,8 +27,10 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'othree/html5.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'blerins/flattown'
 Plugin 'szw/vim-ctrlspace'
 
+colorscheme flattown
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -71,7 +73,6 @@ set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
 set list listchars=tab:>-,trail:.
-set hlsearch
 
 " Bind CTRL-L to clear search
 nnoremap <silent> <leader>l :<C-u>nohlsearch<CR><C-l>
